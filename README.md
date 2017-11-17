@@ -14,3 +14,4 @@ Bonus:
 - Immutabilità
 - Stile il più possibile vicino a Kotlin
 - Animazioni
+- Utilizzo delle coroutine
