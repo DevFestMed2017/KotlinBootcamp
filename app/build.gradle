@@ -13,6 +13,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_KEY", "\"5f77c77b4cd45df90800a9305dd2f988\""
+        buildConfigField "String", "ENDPOINT_URL", "\"http://api.openweathermap.org/data/2.5/\""
     }
     buildTypes {
         release {
