@@ -9,6 +9,7 @@ Requisiti:
 - Deve fare almeno una chiamata di rete
 - Devono esserci test
 - La UI dev'essere curata
+- Uso di `ConstraintLayout`
 
 Bonus:
 - Immutabilità
