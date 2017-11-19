@@ -24,14 +24,14 @@ class RetrofitService {
         // interceptor for custom request (add API_KEY and Custom settings as query)
 
         val interceptor = object : Interceptor{
-            override fun intercept(chain: Interceptor.Chain?): Response? {
-                val request = chain?.request();
-                val url = request?.url()?.newBuilder()
-                        ?.addQueryParameter("APPID", BuildConfig.API_KEY)
-                        ?.addQueryParameter("lang", "it")
-                        ?.addQueryParameter("unit", "metric")
-                        ?.build()
-                return chain?.proceed(request?.newBuilder()?.url(url)?.build())
+            override fun intercept(chain: Interceptor.Chain): Response {
+                val request = chain.request();
+                val url = request.url().newBuilder()
+                        .addQueryParameter("APPID", BuildConfig.API_KEY)
+                        .addQueryParameter("lang", "it")
+                        .addQueryParameter("unit", "metric")
+                        .build()
+                return chain.proceed(request.newBuilder().url(url).build())
             }
         }
 
